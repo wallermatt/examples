@@ -12,7 +12,7 @@ NUMBER_OF_CHECKS = 10000  # how many times the program will load API
 DELAY            = 10     # in seconds - limit on polling API
 
 # set number to send SMS notification to
-MY_NUMBER       = '+447729882652'
+MY_NUMBER       = 'XXXXXX'
 
 
 # sample test data 
@@ -155,8 +155,8 @@ def convert_prices(data):
 
 # send SMS via Twilio
 def send_sms(message):
-    account_sid = "AC8157f6037869129f7f66c8d6ca2bc6d0"
-    auth_token = "e57955883a315c5c77e02099928a8430"
+    account_sid = "XXXX"
+    auth_token = "XXXX"
     client = TwilioRestClient(account_sid, auth_token)
  
     message = client.sms.messages.create(to=MY_NUMBER, from_="+441277420131",
@@ -173,7 +173,7 @@ for goes in range(NUMBER_OF_CHECKS):
     
     # always useful to have try/fail with long running urllib programs - lots of potential failures that aren't serious
     try:
-        response = urllib2.urlopen('https://datacapture.apxgroup.com/?report=orders&user=FSENERGY_DC&pass=fse11DC&platform=UKPX')
+        response = urllib2.urlopen('https://datacapture.apxgroup.com/?report=orders&user=XXXX&pass=XXXX&platform=UKPX')
         html = response.read()
 
         if html[0:4] != '#-16':         # check if refused data because next request made within 10secs
