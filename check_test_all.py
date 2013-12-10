@@ -15,7 +15,7 @@ DELAY            = 10     # in seconds - limit on polling API
 MY_NUMBER       = '+447729882652'
 
 
-# sample test data
+# sample test data 
 # instrument code, market segment flag, buy/sell flag, price, volume, order id, version number, begintime, endtime
 html_test = """2H131009-6A,S_1HB,B,87,50,9447604,0,2013-10-09 19:00:00,2013-10-09 20:00:00
 HH131009-37,S_HH,S,42,26,9447872,2,2013-10-09 19:00:00,2013-10-09 19:30:00
